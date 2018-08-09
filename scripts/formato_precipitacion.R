@@ -42,6 +42,7 @@ Dar_formato <- function(x)
   
   #nombres de las columnas
   names(finca) <- c("Date", "Value")
+  finca$Date <- finca$Date[order(finca$Date)]
   
   #tabla con todos los posibles dias
   dias <- seq(from = finca$Date[1], to = finca$Date[length(finca$Date)], by = "days")
@@ -52,5 +53,7 @@ Dar_formato <- function(x)
   names(result) <- c("Date", "Value")
   
   write.table(result, file = paste0(here("Datos", "Datos_formato"),"/", x,"_P_MM.txt"))
-
 }
+
+lapply(fincas, Dar_formato)
+
