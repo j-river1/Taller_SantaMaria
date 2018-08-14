@@ -42,7 +42,9 @@ Dar_formato <- function(x)
   
   #nombres de las columnas
   names(finca) <- c("Date", "Value")
-  finca$Date <- finca$Date[order(finca$Date)]
+  index <- order(finca$Date)
+  finca$Date <- finca$Date[index]
+  finca$Value <- finca$Value[index]
   
   #tabla con todos los posibles dias
   dias <- seq(from = finca$Date[1], to = finca$Date[length(finca$Date)], by = "days")
