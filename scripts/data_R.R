@@ -63,3 +63,9 @@ error_vector <- c(value_num, value_char)
 
 value_seq <- seq(from = 2, to = 10, by =2 )
 value_logical <- c(1,2,3, rep(3,4), seq(from=1, to=6, by=2))
+
+
+#matrices 
+value <- rnorm(6)
+dim (value) <- c(2,3)
+
