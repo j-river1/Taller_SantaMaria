@@ -143,6 +143,22 @@ merge(X,Y,by=c("GENDER","Weight"))
 merge(X,Y,by=c("GENDER","Weight"),all=TRUE)
 
 
+#rbind y cbind
+
+rbind(1:4,5:8)
+df1 <- data.frame(A=1:5, B=LETTERS[1:5])
+df2 <- data.frame(A=6:10, E=letters[1:5])
+smartbind(df1, df2)
+
+
+rbind(1:4,5:8)
+X <- matrix(c(1:4, 1, 6:8), nr = 2)
+apply(X, MARGIN=1, FUN=mean)
+apply(X, MARGIN=2, FUN=sum)
+
+
+
+
 
 
 
