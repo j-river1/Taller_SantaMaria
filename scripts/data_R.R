@@ -65,6 +65,18 @@ value_seq <- seq(from = 2, to = 10, by =2 )
 value_logical <- c(1,2,3, rep(3,4), seq(from=1, to=6, by=2))
 
 
+#Dates
+dates <- c("92/27/02", "92/02/27", "92/01/14",
+                        +"92/02/28", "92/02/01")
+dates <- as.Date(dates, "%y/%m/%d")
+dates
+class(dates)
+
+#time series 
+ts(1:12, frequency = 12, start = c(1959, 1))
+
+
+
 #matrices 
 set.seed(12)
 value <- rnorm(6)
@@ -113,6 +125,38 @@ BMI[1:2,]
 
 #Acceder a mas columnas
 BMI[,1:2] 
+
+#Operations data frames and matrices 
+
+cbind(1:4,5:8)
+X1 <- data.frame(Id=1:4,GENDER=c("M","F","F","M"),Weight=c(75,68,48,72))
+X2 <- data.frame(Id=1:4,GENDER=c("M","F","F","M"),Height=c(182,165,160,178))
+cbind(X1,X2)
+merge(X1,X2)
+X3 <- data.frame(Id=c(2,1,4,3),GENDER=c("F","M","M","F"), Height=c(165,182,178,160))
+merge(X1, X3)
+
+X <- data.frame(Id=1:4,GENDER=c("M","F","F","M"),Weight=c(75,68,48,72),Income=c(80,90,60,50))
+Y <- data.frame(Id=1:4,GENDER=c("M","F","F","M"),Height=c(182,165,160,178),Salary=c(70,90,40,40))
+
+merge(X,Y,by=c("GENDER","Weight"))
+merge(X,Y,by=c("GENDER","Weight"),all=TRUE)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #Read the tables 
