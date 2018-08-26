@@ -99,10 +99,19 @@ which(x > 1)
 
 
 #Acceder a data frame
+BMI[,"Gender"] <- "M"
+
+#Acceder por fila
+BMI[1,] <- 0
+
+#llenar la data frame
+BMI[] <- 1:12 
+
+#Acceder a mas filas
+BMI[1:2,] 
 
 
-
-
-
+#Acceder a mas columnas
+BMI[,1:2] 
 
 
