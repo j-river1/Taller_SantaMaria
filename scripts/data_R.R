@@ -115,3 +115,44 @@ BMI[1:2,]
 BMI[,1:2] 
 
 
+#Read the tables 
+
+#scan 
+# Reading variable names:
+variable.names <- scan("intima_media.txt",skip=4,nlines=1,what="")
+# Reading data:
+data <- scan("intima_media.txt",skip=7,dec=",")
+mytable <- as.data.frame(matrix(data,ncol=9,byrow=TRUE))
+colnames(mytable) <- variable.names
+
+
+
+
+#read table
+mydata <- read.table("Intima_Media_Thickness.txt",sep=" ",
+                     header=TRUE,dec=",")
+mydata
+# To display the content of mydata.
+head(mydata)
+# Only displays the first few rows
+# of the data.frame.
+attach(mydata)
+mean(AGE)
+# Mean of age.
+var(taille) # Variance of the heights.
+
+read.csv(file.choose())
+# To read comma-separated data
+# (with a . as decimal mark).
+read.csv2(file.choose()) # To read semi-colon-separated data
+# (with a , as decimal mark).
+To read Tab-separated data, it is better to use
+read.delim(file.choose()) # (with a . as decimal mark).
+read.delim2(file.choose())# (with a , as decimal mark).
+
+
+
+
+
+
+
