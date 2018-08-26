@@ -66,6 +66,43 @@ value_logical <- c(1,2,3, rep(3,4), seq(from=1, to=6, by=2))
 
 
 #matrices 
+set.seed(12)
 value <- rnorm(6)
 dim (value) <- c(2,3)
+matrix(value, 2, 3)
+
+#llenado por filas 
+matrix(value, 2, 3, byrow=T)
+
+#llenado por columnas
+matrix <- matrix(value, 2, 3, byrow=F)
+
+
+#data frame
+BMI <- data.frame(Gender = c("M", "F", "M", "F"),
+                    Height = c(1.83, 1.76, 1.82, 1.60),
+                    Weight = c(67, 58, 48, 76),
+                    row.names = c("Jack", "Julia", "Henry", "Emma"))
+#marix as data.frame
+
+data_frame <- data.frame(matrix)
+
+#acceder a vector o matrix. Muestra aleatoria 
+x <- sample(1:5, 20, T)
+x == 1
+ones <- x == 1
+x[ones]<-0
+other <- x > 1
+x[other]
+which(x > 1)
+
+
+
+#Acceder a data frame
+
+
+
+
+
+
 
