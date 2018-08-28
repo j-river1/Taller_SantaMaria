@@ -1,0 +1,4 @@
+http://htmlpreview.github.io/?https://github.com/jagallegod/curso-machine-learning/blob/master/fundamentosR/fundamentosR.nb.html
+https://cran.r-project.org/web/packages/partsm/vignettes/partsm.pdf
+http://rstatistics.net/
+https://books.google.com.co/books?id=7iuq4ikyNdoC&pg=PA12&dq=cart+regression+in+r&hl=es-419&sa=X&ved=0ahUKEwj2i4OV0djcAhXO6lMKHTiiACkQ6AEIKzAA#v=onepage&q=complexity&f=false
